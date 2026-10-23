@@ -1,0 +1,63 @@
+[build-system]
+requires = [
+    "setuptools",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+requires-python = ">=3.10"
+name = "bike_propensity"
+readme = "README.md"
+dynamic = [
+    "version",
+]
+dependencies = [
+    "ipython>=8.10",
+    "jupyterlab>=3.0",
+    "notebook",
+    "kedro~=1.7.0",
+]
+
+[project.scripts]
+bike-propensity = "bike_propensity.__main__:main"
+
+[project.entry-points."kedro.hooks"]
+
+[tool.setuptools.dynamic.version]
+attr = "bike_propensity.__version__"
+
+[tool.setuptools.packages.find]
+where = [
+    "src",
+]
+namespaces = false
+
+[tool.kedro]
+package_name = "bike_propensity"
+project_name = "bike_propensity"
+kedro_init_version = "1.7.0"
+tools = "['None']"
+example_pipeline = "False"
+source_dir = "src"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+src = ["src", "tests"]
+extend-exclude = ["notebooks"]  # notebook exploratorio: no se valida con Ruff
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "D"]
+ignore = ["D100", "D104", "D203", "D213", "E501"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["D"]
+"src/bike_propensity/settings.py" = ["D"]
+"src/bike_propensity/__main__.py" = ["D"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"

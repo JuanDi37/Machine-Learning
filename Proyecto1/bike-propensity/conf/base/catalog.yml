@@ -1,0 +1,80 @@
+# Data catalog. Las capas siguen la convencion de Kedro (01_raw ... 08_reporting).
+
+raw_sales:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/sales_data.csv
+
+clean_sales:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/clean_sales.parquet
+
+cleaning_report:
+  type: json.JSONDataset
+  filepath: data/02_intermediate/cleaning_report.json
+
+model_input:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/model_input.parquet
+
+train_set:
+  type: pandas.ParquetDataset
+  filepath: data/05_model_input/train.parquet
+
+test_set:
+  type: pandas.ParquetDataset
+  filepath: data/05_model_input/test.parquet
+
+baseline_dummy:
+  type: pickle.PickleDataset
+  filepath: data/06_models/baseline_dummy.pkl
+
+baseline_logreg:
+  type: pickle.PickleDataset
+  filepath: data/06_models/baseline_logreg.pkl
+
+final_model:
+  type: pickle.PickleDataset
+  filepath: data/06_models/final_hgb.pkl
+
+cv_results:
+  type: pandas.CSVDataset
+  filepath: data/06_models/tuning_cv_results.csv
+  save_args:
+    index: false
+
+cv_baseline_scores:
+  type: json.JSONDataset
+  filepath: data/06_models/baseline_cv_scores.json
+
+test_predictions:
+  type: pandas.ParquetDataset
+  filepath: data/07_model_output/test_predictions.parquet
+
+metrics:
+  type: json.JSONDataset
+  filepath: data/08_reporting/metrics.json
+
+lift_table:
+  type: pandas.CSVDataset
+  filepath: data/08_reporting/lift_table.csv
+  save_args:
+    index: false
+
+business_impact:
+  type: pandas.CSVDataset
+  filepath: data/08_reporting/business_impact.csv
+  save_args:
+    index: false
+
+permutation_importance:
+  type: pandas.CSVDataset
+  filepath: data/08_reporting/permutation_importance.csv
+  save_args:
+    index: false
+
+diagnostic_plots:
+  type: matplotlib.MatplotlibDataset
+  filepath: data/08_reporting/plots
+  save_args:
+    dpi: 150
+    bbox_inches: tight

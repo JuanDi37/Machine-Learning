@@ -1,0 +1,50 @@
+name: CI
+
+# Se ejecuta en cada push y pull request.
+# Si el proyecto Kedro vive en la raiz de su propio repositorio, elimine `defaults.run.working-directory`
+# y las rutas `Proyecto1/bike-propensity/` de este archivo.
+on:
+  push:
+  pull_request:
+
+defaults:
+  run:
+    working-directory: Proyecto1/bike-propensity
+
+jobs:
+  quality-and-pipeline:
+    runs-on: ubuntu-latest
+    env:
+      KEDRO_DISABLE_TELEMETRY: "1"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: Proyecto1/bike-propensity/requirements-dev.txt
+
+      - name: Instalar dependencias
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-dev.txt
+          pip install -e . --no-deps
+
+      - name: Ruff (lint)
+        run: ruff check .
+
+      - name: Ruff (formato)
+        run: ruff format --check .
+
+      - name: Pruebas automatizadas
+        run: pytest --cov=src --cov-report=term-missing
+
+      - name: Verificar que el pipeline completo corre (busqueda reducida)
+        run: python -m kedro run --params "tuning.n_iter=3,evaluation.permutation_repeats=2"
+
+      - name: Guardar resultados del pipeline
+        uses: actions/upload-artifact@v4
+        with:
+          name: reporting
+          path: Proyecto1/bike-propensity/data/08_reporting
