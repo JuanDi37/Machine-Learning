@@ -1,266 +1,266 @@
 {
  "cv": [
   {
-   "modelo": "Mezcla HGB+LGBM+CatBoost",
-   "AUC (media)": 0.66421,
-   "± sd": 0.0057,
-   "PR-AUC": 0.25591,
-   "Δ AUC vs HGB": 0.00382,
-   "pliegues mejores (de 5)": 5,
-   "AUC OOF agregado": 0.66416
-  },
-  {
-   "modelo": "Mezcla HGB+LGBM",
-   "AUC (media)": 0.66288,
-   "± sd": 0.00561,
-   "PR-AUC": 0.25486,
-   "Δ AUC vs HGB": 0.00248,
-   "pliegues mejores (de 5)": 5,
-   "AUC OOF agregado": 0.66278
-  },
-  {
    "modelo": "LGBM + variante: +país×tramo10años",
-   "AUC (media)": 0.66258,
-   "± sd": 0.00561,
-   "PR-AUC": 0.2556,
-   "Δ AUC vs HGB": 0.00218,
-   "pliegues mejores (de 5)": 5,
-   "AUC OOF agregado": 0.66241
+   "AUC (media)": 0.66247,
+   "± sd": 0.00468,
+   "PR-AUC": 0.25732,
+   "Δ AUC vs HGB": 0.00535,
+   "pliegues mejores (de 5)": 4,
+   "AUC OOF agregado": 0.66232
   },
   {
-   "modelo": "CatBoost (depth 6, 400 it.)",
-   "AUC (media)": 0.66176,
-   "± sd": 0.00586,
-   "PR-AUC": 0.2543,
-   "Δ AUC vs HGB": 0.00136,
-   "pliegues mejores (de 5)": 4,
-   "AUC OOF agregado": 0.66165
+   "modelo": "Mezcla HGB+LGBM+CatBoost",
+   "AUC (media)": 0.66187,
+   "± sd": 0.00621,
+   "PR-AUC": 0.25729,
+   "Δ AUC vs HGB": 0.00475,
+   "pliegues mejores (de 5)": 5,
+   "AUC OOF agregado": 0.66185
   },
   {
    "modelo": "LGBM + variante: +Age_Group",
-   "AUC (media)": 0.66154,
-   "± sd": 0.00579,
-   "PR-AUC": 0.25462,
-   "Δ AUC vs HGB": 0.00114,
-   "pliegues mejores (de 5)": 4,
-   "AUC OOF agregado": 0.66132
+   "AUC (media)": 0.66147,
+   "± sd": 0.00534,
+   "PR-AUC": 0.25619,
+   "Δ AUC vs HGB": 0.00435,
+   "pliegues mejores (de 5)": 5,
+   "AUC OOF agregado": 0.66138
   },
   {
    "modelo": "LightGBM (Optuna, 60 intentos)",
-   "AUC (media)": 0.66121,
-   "± sd": 0.00581,
-   "PR-AUC": 0.25485,
-   "Δ AUC vs HGB": 0.00081,
-   "pliegues mejores (de 5)": 4,
-   "AUC OOF agregado": 0.66102
-  },
-  {
-   "modelo": "HGB (modelo actual, ventana estricta)",
-   "AUC (media)": 0.6604,
-   "± sd": 0.00543,
-   "PR-AUC": 0.25043,
-   "Δ AUC vs HGB": 0.0,
-   "pliegues mejores (de 5)": 0,
-   "AUC OOF agregado": 0.66014
-  },
-  {
-   "modelo": "LightGBM (valores por defecto)",
-   "AUC (media)": 0.6599,
-   "± sd": 0.00599,
-   "PR-AUC": 0.25183,
-   "Δ AUC vs HGB": -0.0005,
-   "pliegues mejores (de 5)": 2,
-   "AUC OOF agregado": 0.65975
+   "AUC (media)": 0.66122,
+   "± sd": 0.00552,
+   "PR-AUC": 0.25643,
+   "Δ AUC vs HGB": 0.0041,
+   "pliegues mejores (de 5)": 5,
+   "AUC OOF agregado": 0.66117
   },
   {
    "modelo": "LGBM + variante: mes categórico",
-   "AUC (media)": 0.65933,
-   "± sd": 0.00559,
-   "PR-AUC": 0.25311,
-   "Δ AUC vs HGB": -0.00106,
-   "pliegues mejores (de 5)": 2,
-   "AUC OOF agregado": 0.65912
+   "AUC (media)": 0.66102,
+   "± sd": 0.00567,
+   "PR-AUC": 0.25563,
+   "Δ AUC vs HGB": 0.0039,
+   "pliegues mejores (de 5)": 4,
+   "AUC OOF agregado": 0.66094
   },
   {
-   "modelo": "Mezcla HGB+LGBM+CatBoost+GAM",
-   "AUC (media)": 0.65911,
-   "± sd": 0.00549,
-   "PR-AUC": 0.25131,
-   "Δ AUC vs HGB": -0.00129,
-   "pliegues mejores (de 5)": 2,
-   "AUC OOF agregado": 0.65908
+   "modelo": "Mezcla HGB+LGBM",
+   "AUC (media)": 0.66057,
+   "± sd": 0.00637,
+   "PR-AUC": 0.256,
+   "Δ AUC vs HGB": 0.00345,
+   "pliegues mejores (de 5)": 5,
+   "AUC OOF agregado": 0.66054
+  },
+  {
+   "modelo": "CatBoost (depth 6, 400 it.)",
+   "AUC (media)": 0.65978,
+   "± sd": 0.00576,
+   "PR-AUC": 0.25532,
+   "Δ AUC vs HGB": 0.00266,
+   "pliegues mejores (de 5)": 4,
+   "AUC OOF agregado": 0.65967
   },
   {
    "modelo": "LGBM + variante: sin género",
-   "AUC (media)": 0.65744,
-   "± sd": 0.00555,
-   "PR-AUC": 0.25317,
-   "Δ AUC vs HGB": -0.00296,
+   "AUC (media)": 0.65754,
+   "± sd": 0.00514,
+   "PR-AUC": 0.25402,
+   "Δ AUC vs HGB": 0.00041,
+   "pliegues mejores (de 5)": 4,
+   "AUC OOF agregado": 0.65754
+  },
+  {
+   "modelo": "LightGBM (valores por defecto)",
+   "AUC (media)": 0.65732,
+   "± sd": 0.00626,
+   "PR-AUC": 0.25236,
+   "Δ AUC vs HGB": 0.0002,
+   "pliegues mejores (de 5)": 3,
+   "AUC OOF agregado": 0.65728
+  },
+  {
+   "modelo": "HGB (modelo actual)",
+   "AUC (media)": 0.65712,
+   "± sd": 0.00696,
+   "PR-AUC": 0.25347,
+   "Δ AUC vs HGB": 0.0,
    "pliegues mejores (de 5)": 0,
-   "AUC OOF agregado": 0.65721
+   "AUC OOF agregado": 0.65707
+  },
+  {
+   "modelo": "Mezcla HGB+LGBM+CatBoost+GAM",
+   "AUC (media)": 0.6569,
+   "± sd": 0.00653,
+   "PR-AUC": 0.2519,
+   "Δ AUC vs HGB": -0.00022,
+   "pliegues mejores (de 5)": 1,
+   "AUC OOF agregado": 0.65686
   },
   {
    "modelo": "Tabla de consulta país×edad×mes",
-   "AUC (media)": 0.63694,
-   "± sd": 0.00228,
-   "PR-AUC": 0.23545,
-   "Δ AUC vs HGB": -0.02346,
+   "AUC (media)": 0.63533,
+   "± sd": 0.00551,
+   "PR-AUC": 0.23698,
+   "Δ AUC vs HGB": -0.02179,
    "pliegues mejores (de 5)": 0,
-   "AUC OOF agregado": 0.63696
+   "AUC OOF agregado": 0.63527
   },
   {
    "modelo": "GAM logístico + edad×país (C=0.3)",
-   "AUC (media)": 0.62551,
-   "± sd": 0.00681,
-   "PR-AUC": 0.22758,
-   "Δ AUC vs HGB": -0.03489,
+   "AUC (media)": 0.62616,
+   "± sd": 0.00572,
+   "PR-AUC": 0.23002,
+   "Δ AUC vs HGB": -0.03096,
    "pliegues mejores (de 5)": 0,
-   "AUC OOF agregado": 0.62523
+   "AUC OOF agregado": 0.62606
   },
   {
    "modelo": "GAM logístico + edad×país (C=0.1)",
-   "AUC (media)": 0.62475,
-   "± sd": 0.00662,
-   "PR-AUC": 0.22727,
-   "Δ AUC vs HGB": -0.03565,
+   "AUC (media)": 0.62509,
+   "± sd": 0.00637,
+   "PR-AUC": 0.2293,
+   "Δ AUC vs HGB": -0.03203,
    "pliegues mejores (de 5)": 0,
-   "AUC OOF agregado": 0.62446
+   "AUC OOF agregado": 0.62502
   },
   {
    "modelo": "Tabla de consulta estado×edad×mes",
-   "AUC (media)": 0.6227,
-   "± sd": 0.00359,
-   "PR-AUC": 0.22619,
-   "Δ AUC vs HGB": -0.0377,
+   "AUC (media)": 0.61831,
+   "± sd": 0.00563,
+   "PR-AUC": 0.22584,
+   "Δ AUC vs HGB": -0.03881,
    "pliegues mejores (de 5)": 0,
-   "AUC OOF agregado": 0.62263
-  },
-  {
-   "modelo": "GAM logístico (C=0.3)",
-   "AUC (media)": 0.61277,
-   "± sd": 0.00631,
-   "PR-AUC": 0.22005,
-   "Δ AUC vs HGB": -0.04763,
-   "pliegues mejores (de 5)": 0,
-   "AUC OOF agregado": 0.61243
+   "AUC OOF agregado": 0.61834
   },
   {
    "modelo": "GAM logístico (C=1.0)",
-   "AUC (media)": 0.61267,
-   "± sd": 0.00626,
-   "PR-AUC": 0.2196,
-   "Δ AUC vs HGB": -0.04773,
+   "AUC (media)": 0.61084,
+   "± sd": 0.0067,
+   "PR-AUC": 0.21956,
+   "Δ AUC vs HGB": -0.04628,
    "pliegues mejores (de 5)": 0,
-   "AUC OOF agregado": 0.61234
+   "AUC OOF agregado": 0.6107
+  },
+  {
+   "modelo": "GAM logístico (C=0.3)",
+   "AUC (media)": 0.61076,
+   "± sd": 0.00664,
+   "PR-AUC": 0.21963,
+   "Δ AUC vs HGB": -0.04636,
+   "pliegues mejores (de 5)": 0,
+   "AUC OOF agregado": 0.61062
   },
   {
    "modelo": "GAM logístico (C=0.05)",
-   "AUC (media)": 0.61258,
-   "± sd": 0.00642,
-   "PR-AUC": 0.21999,
-   "Δ AUC vs HGB": -0.04782,
+   "AUC (media)": 0.61072,
+   "± sd": 0.00671,
+   "PR-AUC": 0.21979,
+   "Δ AUC vs HGB": -0.0464,
    "pliegues mejores (de 5)": 0,
-   "AUC OOF agregado": 0.61226
+   "AUC OOF agregado": 0.61057
   }
  ],
  "test": [
   {
-   "modelo": "HGB (re-entrenado, ventana estricta)",
-   "AUC": 0.65961,
-   "IC95 AUC": "[0.648, 0.669]",
-   "PR-AUC": 0.25027,
-   "IC95 PR-AUC": "[0.237, 0.262]",
-   "lift decil 1": 1.79623,
-   "captura top-30%": 0.4638
+   "modelo": "HGB (modelo actual)",
+   "AUC": 0.66356,
+   "IC95 AUC": "[0.653, 0.676]",
+   "PR-AUC": 0.24813,
+   "IC95 PR-AUC": "[0.238, 0.260]",
+   "lift decil 1": 1.70071,
+   "captura top-30%": 0.46194
   },
   {
    "modelo": "LightGBM (Optuna)",
-   "AUC": 0.65832,
-   "IC95 AUC": "[0.646, 0.669]",
-   "PR-AUC": 0.25512,
-   "IC95 PR-AUC": "[0.243, 0.269]",
-   "lift decil 1": 1.85366,
-   "captura top-30%": 0.46348
+   "AUC": 0.66577,
+   "IC95 AUC": "[0.656, 0.678]",
+   "PR-AUC": 0.25132,
+   "IC95 PR-AUC": "[0.241, 0.262]",
+   "lift decil 1": 1.81044,
+   "captura top-30%": 0.47
   },
   {
    "modelo": "CatBoost",
-   "AUC": 0.66135,
-   "IC95 AUC": "[0.649, 0.672]",
-   "PR-AUC": 0.25862,
-   "IC95 PR-AUC": "[0.246, 0.273]",
-   "lift decil 1": 1.86004,
-   "captura top-30%": 0.47177
+   "AUC": 0.66557,
+   "IC95 AUC": "[0.656, 0.678]",
+   "PR-AUC": 0.252,
+   "IC95 PR-AUC": "[0.243, 0.264]",
+   "lift decil 1": 1.78139,
+   "captura top-30%": 0.47226
   },
   {
    "modelo": "Mezcla HGB+LGBM+CatBoost",
-   "AUC": 0.66229,
-   "IC95 AUC": "[0.650, 0.673]",
-   "PR-AUC": 0.25701,
-   "IC95 PR-AUC": "[0.245, 0.271]",
-   "lift decil 1": 1.84728,
-   "captura top-30%": 0.47177
+   "AUC": 0.6671,
+   "IC95 AUC": "[0.657, 0.680]",
+   "PR-AUC": 0.25242,
+   "IC95 PR-AUC": "[0.242, 0.264]",
+   "lift decil 1": 1.78462,
+   "captura top-30%": 0.4671
   },
   {
-   "modelo": "Producción actual (HGB, ventana 2013+)",
-   "AUC": 0.64864,
-   "IC95 AUC": "[0.637, 0.660]",
-   "PR-AUC": 0.24973,
-   "IC95 PR-AUC": "[0.238, 0.261]",
-   "lift decil 1": 1.81856,
-   "captura top-30%": 0.46252
+   "modelo": "Modelo anterior (ventana ≥2013, sin grupos de prueba)",
+   "AUC": 0.64262,
+   "IC95 AUC": "[0.632, 0.655]",
+   "PR-AUC": 0.23694,
+   "IC95 PR-AUC": "[0.227, 0.248]",
+   "lift decil 1": 1.63617,
+   "captura top-30%": 0.44097
   },
   {
    "modelo": "Sin información (prevalencia)",
    "AUC": 0.5,
    "IC95 AUC": "[0.500, 0.500]",
-   "PR-AUC": 0.16419,
-   "IC95 PR-AUC": "[0.164, 0.164]",
+   "PR-AUC": 0.16224,
+   "IC95 PR-AUC": "[0.162, 0.162]",
    "lift decil 1": 1.0,
    "captura top-30%": 0.3
   }
  ],
  "valor": [
   {
-   "modelo": "HGB (re-entrenado, ventana estricta)",
+   "modelo": "HGB (modelo actual)",
    "criterio": "ordenar por p",
-   "ganancia-bici capturada top-10%": 0.17022,
-   "ganancia-bici capturada top-20%": 0.314,
-   "ganancia-bici capturada top-30%": 0.44823
+   "ganancia-bici capturada top-10%": 0.15096,
+   "ganancia-bici capturada top-20%": 0.31061,
+   "ganancia-bici capturada top-30%": 0.45874
   },
   {
-   "modelo": "HGB (re-entrenado, ventana estricta)",
+   "modelo": "HGB (modelo actual)",
    "criterio": "ordenar por p × ganancia media/bici país",
-   "ganancia-bici capturada top-10%": 0.17408,
-   "ganancia-bici capturada top-20%": 0.32903,
-   "ganancia-bici capturada top-30%": 0.46324
+   "ganancia-bici capturada top-10%": 0.1573,
+   "ganancia-bici capturada top-20%": 0.3347,
+   "ganancia-bici capturada top-30%": 0.48388
   },
   {
    "modelo": "LightGBM (Optuna)",
    "criterio": "ordenar por p",
-   "ganancia-bici capturada top-10%": 0.1799,
-   "ganancia-bici capturada top-20%": 0.32086,
-   "ganancia-bici capturada top-30%": 0.45715
+   "ganancia-bici capturada top-10%": 0.17188,
+   "ganancia-bici capturada top-20%": 0.3119,
+   "ganancia-bici capturada top-30%": 0.46376
   },
   {
    "modelo": "LightGBM (Optuna)",
    "criterio": "ordenar por p × ganancia media/bici país",
-   "ganancia-bici capturada top-10%": 0.17904,
-   "ganancia-bici capturada top-20%": 0.3329,
-   "ganancia-bici capturada top-30%": 0.47605
+   "ganancia-bici capturada top-10%": 0.16932,
+   "ganancia-bici capturada top-20%": 0.33533,
+   "ganancia-bici capturada top-30%": 0.47876
   },
   {
    "modelo": "Mezcla HGB+LGBM+CatBoost",
    "criterio": "ordenar por p",
-   "ganancia-bici capturada top-10%": 0.18107,
-   "ganancia-bici capturada top-20%": 0.3239,
-   "ganancia-bici capturada top-30%": 0.46076
+   "ganancia-bici capturada top-10%": 0.1645,
+   "ganancia-bici capturada top-20%": 0.32036,
+   "ganancia-bici capturada top-30%": 0.46378
   },
   {
    "modelo": "Mezcla HGB+LGBM+CatBoost",
    "criterio": "ordenar por p × ganancia media/bici país",
-   "ganancia-bici capturada top-10%": 0.17132,
-   "ganancia-bici capturada top-20%": 0.3325,
-   "ganancia-bici capturada top-30%": 0.46745
+   "ganancia-bici capturada top-10%": 0.16984,
+   "ganancia-bici capturada top-20%": 0.33385,
+   "ganancia-bici capturada top-30%": 0.47863
   },
   {
    "modelo": "Azar",
@@ -271,22 +271,22 @@
   }
  ],
  "lgbm_best_params": {
-  "n_estimators": 350,
-  "learning_rate": 0.012558589848981196,
-  "num_leaves": 45,
-  "max_depth": 10,
-  "min_child_samples": 111,
-  "reg_lambda": 0.47830380570736375,
-  "reg_alpha": 0.04238094774719874,
-  "subsample": 0.569967077035213,
-  "colsample_bytree": 0.8349471908001309,
-  "cat_smooth": 4.561287005527183,
-  "cat_l2": 25.006163750661614,
-  "min_data_per_group": 245,
-  "path_smooth": 11.379650415944813,
+  "n_estimators": 450,
+  "learning_rate": 0.012931686390939254,
+  "num_leaves": 58,
+  "max_depth": 9,
+  "min_child_samples": 69,
+  "reg_lambda": 0.06071783281491422,
+  "reg_alpha": 0.13752508712599507,
+  "subsample": 0.7210464089770994,
+  "colsample_bytree": 0.8645513726611658,
+  "cat_smooth": 5.160429507457393,
+  "cat_l2": 30.123183979915073,
+  "min_data_per_group": 184,
+  "path_smooth": 9.247612808522288,
   "subsample_freq": 1
  },
- "n_train": 77265,
- "n_test": 19094,
- "prevalence_test": 0.16418770294333299
+ "n_train": 77251,
+ "n_test": 19108,
+ "prevalence_test": 0.16223571279045426
 }
