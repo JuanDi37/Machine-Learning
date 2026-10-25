@@ -24,7 +24,7 @@ Las cifras exactas se regeneran con `kedro run` (se guardan en `data/08_reportin
 data/01_raw/sales_data.csv                         # dataset original (único dato versionado)
 notebooks/Proyecto_1_Propension_Bicicletas.ipynb   # análisis completo (CRISP-DM), ejecutado
 docs/Informe_Propension_Bicicletas.pdf             # informe para audiencia no técnica
-docs/Poster_Propension_Bicicletas.pptx             # diapositiva de presentación (infografía)
+docs/Poster_Propension_Bicicletas.{html,pdf,pptx}      # diapositiva de presentación (infografía): página web, PDF y PowerPoint
 conf/base/catalog.yml, parameters.yml              # catálogo de datos y parámetros
 src/bike_propensity/pipelines/                     # data_processing, model_training, model_evaluation
 tests/                                             # pruebas con datos sintéticos

@@ -1,0 +1,139 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Propensión de compra de bicicletas — Póster</title><style>
+:root { --azul:#2a78d6; --osc:#0d366b; --nar:#eb6834; --tinta:#111827; --t2:#5b6472; }
+* { box-sizing:border-box; margin:0; padding:0; }
+@page { size:1920px 1080px; margin:0; }
+html,body { background:#e9eef7; }
+body { font-family:"Segoe UI",system-ui,Arial,sans-serif; color:var(--tinta); }
+#fit { width:1920px; height:1080px; transform-origin:top left; }
+#poster { position:relative; width:1920px; height:1080px; overflow:hidden;
+  background:radial-gradient(1200px 500px at 85% -10%, #ffe9dd 0%, transparent 60%), radial-gradient(1000px 600px at -5% 105%, #dbe9ff 0%, transparent 60%), #f7f9fd; }
+header { height:128px; padding:20px 46px; display:flex; justify-content:space-between; align-items:center;
+  background:linear-gradient(110deg,#0d366b 0%,#1d5bb0 55%,#2a78d6 100%); color:#fff; border-radius:0 0 34px 34px; box-shadow:0 10px 30px rgba(13,54,107,.25); }
+header h1 { font-size:46px; font-weight:800; letter-spacing:-.8px; line-height:1.05; }
+header .sub { font-size:18.5px; opacity:.9; margin-top:7px; }
+.kpis { display:flex; gap:14px; }
+.kpi { background:rgba(255,255,255,.16); border:1.5px solid rgba(255,255,255,.35); border-radius:20px; padding:9px 18px; text-align:center; min-width:172px; backdrop-filter:blur(2px); }
+.kpi b { display:block; font-size:36px; font-weight:800; line-height:1.1; }
+.kpi span { font-size:13.5px; opacity:.92; line-height:1.2; display:block; }
+.kpi.o { background:var(--nar); border-color:#ffb08f; }
+main { position:absolute; left:34px; right:34px; top:150px; height:828px; display:grid; grid-template-columns:552px 1fr 560px; gap:20px; }
+.col { display:flex; flex-direction:column; gap:12px; min-height:0; }
+.card { background:#fff; border-radius:22px; padding:14px 20px 14px; box-shadow:0 4px 18px rgba(30,64,120,.09); border:1px solid #edf1f8; position:relative; }
+.card h2 { font-size:21.5px; font-weight:800; color:var(--osc); margin-bottom:6px; display:flex; align-items:center; gap:10px; }
+.card h2 .ic { width:34px; height:34px; border-radius:11px; background:linear-gradient(135deg,#2a78d6,#6da7ec); color:#fff; font-size:18px; display:inline-flex; align-items:center; justify-content:center; flex:none; }
+.card.n h2 .ic { background:linear-gradient(135deg,#eb6834,#f59a72); }
+p, li { font-size:16.2px; line-height:1.34; color:#1f2937; }
+ul { list-style:none; } li { position:relative; padding-left:20px; margin:4px 0; }
+li::before { content:""; position:absolute; left:2px; top:.5em; width:9px; height:9px; border-radius:50%; background:var(--azul); }
+.n li::before { background:var(--nar); }
+.flow { display:flex; align-items:center; flex-wrap:wrap; gap:6px 4px; margin:6px 0 4px; }
+.chip { background:#eef4fd; color:var(--osc); border-radius:999px; padding:4px 12px; font-size:14.8px; font-weight:700; }
+.chip.last { background:var(--nar); color:#fff; }
+.ar { color:var(--nar); font-weight:800; font-size:15px; }
+.big { display:flex; gap:12px; margin:6px 0 2px; }
+.big div { flex:1; background:#f2f6fd; border-radius:16px; padding:8px 10px; text-align:center; }
+.big b { display:block; font-size:28px; color:var(--osc); font-weight:800; }
+.big span { font-size:13.5px; color:var(--t2); }
+.big div.o b { color:var(--nar); }
+.mrow { display:grid; grid-template-columns:232px 1fr 56px; align-items:center; gap:8px; margin:3.5px 0; font-size:14.6px; }
+.mrow .mn { color:#374151; white-space:nowrap; }
+.mbar { background:#eef2f8; height:11px; border-radius:6px; overflow:hidden; } .mbar i { display:block; height:100%; background:#9ec5f4; border-radius:6px; }
+.mrow b { text-align:right; font-variant-numeric:tabular-nums; color:#374151; font-weight:600; }
+.mrow.sel .mn, .mrow.sel b { color:var(--nar); font-weight:800; } .mrow.sel .mbar i { background:var(--nar); }
+.two { display:grid; grid-template-columns:1.32fr 1fr; gap:14px; }
+.cap { font-size:13.5px; color:var(--t2); margin-top:-2px; font-weight:600; }
+.call { background:linear-gradient(120deg,#fff3ec,#ffe6d8); border-radius:16px; padding:9px 14px; margin-top:8px; font-size:16.4px; border-left:5px solid var(--nar); }
+.heat { display:grid; grid-template-columns:104px repeat(5,1fr); gap:4px; align-items:center; text-align:center; font-size:13.5px; }
+.heat em { font-style:normal; color:var(--t2); font-weight:600; } .heat em.pl { text-align:right; padding-right:6px; font-size:14px; color:#374151; }
+.hc { border-radius:8px; padding:6px 0; font-weight:800; font-size:14.5px; }
+ol { list-style:none; counter-reset:r; } ol li { counter-increment:r; padding-left:40px; margin:6px 0; min-height:28px; }
+ol li::before { content:counter(r); background:var(--nar); width:28px; height:28px; border-radius:50%; top:0; left:0; color:#fff; font-weight:800; font-size:15px; display:flex; align-items:center; justify-content:center; }
+footer { position:absolute; left:34px; right:34px; top:990px; height:74px; border-radius:22px; background:linear-gradient(110deg,#0d366b,#1d5bb0); color:#fff; padding:8px 22px; display:flex; align-items:center; gap:12px; box-shadow:0 8px 22px rgba(13,54,107,.25); }
+footer h3 { font-size:19px; width:150px; line-height:1.1; font-weight:800; }
+.nd { background:rgba(255,255,255,.14); border:1.5px solid rgba(255,255,255,.5); border-radius:14px; padding:6px 12px; text-align:center; font-size:15.5px; font-weight:700; line-height:1.15; }
+.nd small { display:block; font-size:12px; font-weight:500; opacity:.88; }
+.fa { color:#ffb48f; font-size:20px; font-weight:800; }
+.ci { margin-left:auto; text-align:right; font-size:14.5px; line-height:1.35; }
+@media print { html,body { background:#fff; } #fit { transform:none !important; } }
+</style></head><body>
+<div id="fit"><div id="poster">
+<header>
+<div><h1>¿A qué perfiles dirigir las ventas de bicicletas?</h1>
+<div class="sub">Machine Learning for Business · Proyecto 1 · Dataset: Sales Data (Kaggle) · Juan Diego Letona y Jose Tanchez</div></div>
+<div class="kpis">
+<div class="kpi"><b>0.665</b><span>ROC-AUC en datos<br>no vistos (azar 0.50)</span></div>
+<div class="kpi"><b>1.7×</b><span>lift del 10 %<br>mejor puntuado</span></div>
+<div class="kpi o"><b>46.5 %</b><span>de las bicicletas con<br>el 30 % de contactos</span></div>
+</div></header>
+
+<main>
+<div class="col">
+<div class="card"><h2><span class="ic">?</span>Problema y pregunta</h2>
+<p>Las bicicletas son el <b>17 % de los pedidos</b> pero generan el <b>51 % de la ganancia</b>. Marketing debe decidir a quién ofrecérselas con presupuesto limitado.</p>
+<div class="call" style="margin-top:7px"><b>Pregunta:</b> conociendo solo edad, género, país, estado y mes, ¿qué probabilidad hay de que un pedido sea una bicicleta?</div>
+<p style="margin-top:7px"><b>Sin fuga:</b> se excluyen producto, precio, costo, cantidad, ingreso y ganancia.</p></div>
+
+<div class="card"><h2><span class="ic">▦</span>Datos</h2>
+<div class="big"><div><b>113 mil</b><span>pedidos 2011–2016</span></div><div class="o"><b>96,359</b><span>pedidos analizados</span></div><div><b>5</b><span>variables de perfil</span></div></div>
+<ul><li>Sin faltantes; 1,000 duplicados eliminados; solo 22 meses con catálogo completo.</li>
+<li>Pedidos «gemelos» entre años: partición <b>por grupos</b>.</li></ul></div>
+
+<div class="card"><h2><span class="ic">⚙</span>Metodología (CRISP-DM)</h2>
+<div class="flow"><span class="chip">Limpieza</span><span class="ar">›</span><span class="chip">Partición 80/20 por grupos</span><span class="ar">›</span><span class="chip">9 modelos en CV</span><span class="ar">›</span><span class="chip">Optuna (60 pruebas)</span><span class="ar">›</span><span class="chip last">Prueba única + SHAP</span></div>
+<p>Métrica principal: <b>PR-AUC</b>; intervalos por <i>bootstrap</i> de grupos.</p></div>
+
+<div class="card n"><h2><span class="ic">!</span>Limitaciones</h2>
+<ul><li>Poder moderado: solo 5 variables de perfil.</li>
+<li>Asociación, no causalidad: validar con prueba A/B.</li>
+<li>Un ciclo anual por mes; filas = pedidos, no clientes.</li>
+<li>Edad y género orientan la oferta, nunca excluyen.</li></ul></div>
+</div>
+
+<div class="col">
+<div class="card"><h2><span class="ic">★</span>Modelo seleccionado: LightGBM + Optuna</h2>
+<p>Cientos de árboles pequeños en secuencia, cada uno corrige los errores del anterior. Rápido, bien calibrado y explicable con SHAP. Entre modelos a menos de 0.002 de PR-AUC se eligió el más simple.</p>
+<div class="cap" style="margin-top:8px">PR-AUC en validación cruzada (10 pliegues)</div>
+<div class="mrow "><span class="mn">Mezcla LightGBM + CatBoost</span><span class="mbar"><i style="width:90.1%"></i></span><b>0.258</b></div><div class="mrow "><span class="mn">CatBoost</span><span class="mbar"><i style="width:88.9%"></i></span><b>0.257</b></div><div class="mrow sel"><span class="mn">LightGBM + Optuna ★</span><span class="mbar"><i style="width:88.5%"></i></span><b>0.256</b></div><div class="mrow "><span class="mn">LightGBM (por defecto)</span><span class="mbar"><i style="width:87.1%"></i></span><b>0.255</b></div><div class="mrow "><span class="mn">HistGradientBoosting</span><span class="mbar"><i style="width:85.1%"></i></span><b>0.252</b></div><div class="mrow "><span class="mn">XGBoost</span><span class="mbar"><i style="width:84.7%"></i></span><b>0.252</b></div><div class="mrow "><span class="mn">Regresión logística + interacc.</span><span class="mbar"><i style="width:65.2%"></i></span><b>0.228</b></div><div class="mrow "><span class="mn">Regresión logística</span><span class="mbar"><i style="width:57.6%"></i></span><b>0.219</b></div><div class="mrow "><span class="mn">Línea base (azar)</span><span class="mbar"><i style="width:14.1%"></i></span><b>0.167</b></div></div>
+
+<div class="card"><h2><span class="ic">↗</span>Resultados en datos no vistos (19,108 pedidos)</h2>
+<div class="two"><div><div class="cap">Lift por decil de puntaje (1 = mayor propensión)</div><svg viewBox="0 0 520 250" width="100%"><line x1="34" x2="512" y1="220.0" y2="220.0" stroke="#e6ebf3" stroke-width="1"/><text x="28" y="224.0" text-anchor="end" font-size="12" fill="#6b7280">0</text><line x1="34" x2="512" y1="165.8" y2="165.8" stroke="#e6ebf3" stroke-width="1"/><text x="28" y="169.8" text-anchor="end" font-size="12" fill="#6b7280">0.5</text><line x1="34" x2="512" y1="111.6" y2="111.6" stroke="#e6ebf3" stroke-width="1"/><text x="28" y="115.6" text-anchor="end" font-size="12" fill="#6b7280">1</text><line x1="34" x2="512" y1="57.4" y2="57.4" stroke="#e6ebf3" stroke-width="1"/><text x="28" y="61.4" text-anchor="end" font-size="12" fill="#6b7280">1.5</text><rect x="40.7" y="32.4" width="34.4" height="187.6" rx="5" fill="#2a78d6"/><text x="57.9" y="27.4" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1f2937">1.73</text><text x="57.9" y="240" text-anchor="middle" font-size="12" fill="#6b7280">1</text><rect x="88.5" y="49.8" width="34.4" height="170.2" rx="5" fill="#2a78d6"/><text x="105.7" y="44.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1f2937">1.57</text><text x="105.7" y="240" text-anchor="middle" font-size="12" fill="#6b7280">2</text><rect x="136.3" y="72.5" width="34.4" height="147.5" rx="5" fill="#2a78d6"/><text x="153.5" y="67.5" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1f2937">1.36</text><text x="153.5" y="240" text-anchor="middle" font-size="12" fill="#6b7280">3</text><rect x="184.1" y="82.3" width="34.4" height="137.7" rx="5" fill="#2a78d6"/><text x="201.3" y="77.3" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1f2937">1.27</text><text x="201.3" y="240" text-anchor="middle" font-size="12" fill="#6b7280">4</text><rect x="231.9" y="101.8" width="34.4" height="118.2" rx="5" fill="#2a78d6"/><text x="249.1" y="96.8" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1f2937">1.09</text><text x="249.1" y="240" text-anchor="middle" font-size="12" fill="#6b7280">5</text><rect x="279.7" y="118.1" width="34.4" height="101.9" rx="5" fill="#c3cad6"/><text x="296.9" y="113.1" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1f2937">0.94</text><text x="296.9" y="240" text-anchor="middle" font-size="12" fill="#6b7280">6</text><rect x="327.5" y="130.0" width="34.4" height="90.0" rx="5" fill="#c3cad6"/><text x="344.7" y="125.0" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1f2937">0.83</text><text x="344.7" y="240" text-anchor="middle" font-size="12" fill="#6b7280">7</text><rect x="375.3" y="148.4" width="34.4" height="71.6" rx="5" fill="#c3cad6"/><text x="392.5" y="143.4" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1f2937">0.66</text><text x="392.5" y="240" text-anchor="middle" font-size="12" fill="#6b7280">8</text><rect x="423.1" y="176.6" width="34.4" height="43.4" rx="5" fill="#c3cad6"/><text x="440.3" y="171.6" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1f2937">0.40</text><text x="440.3" y="240" text-anchor="middle" font-size="12" fill="#6b7280">9</text><rect x="470.9" y="203.7" width="34.4" height="16.3" rx="5" fill="#c3cad6"/><text x="488.1" y="198.7" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1f2937">0.15</text><text x="488.1" y="240" text-anchor="middle" font-size="12" fill="#6b7280">10</text><line x1="34" x2="512" y1="111.6" y2="111.6" stroke="#eb6834" stroke-width="2" stroke-dasharray="6 4"/><text x="510" y="105.6" text-anchor="end" font-size="12" font-weight="600" fill="#eb6834">promedio = 1</text></svg></div>
+<div><div class="cap">% de bicicletas capturadas vs. % contactado</div><svg viewBox="0 0 400 250" width="100%"><line x1="34" x2="388" y1="220.0" y2="220.0" stroke="#e6ebf3"/><text x="28" y="224.0" text-anchor="end" font-size="12" fill="#6b7280">0</text><line x1="34" x2="388" y1="168.5" y2="168.5" stroke="#e6ebf3"/><text x="28" y="172.5" text-anchor="end" font-size="12" fill="#6b7280">25</text><line x1="34" x2="388" y1="117.0" y2="117.0" stroke="#e6ebf3"/><text x="28" y="121.0" text-anchor="end" font-size="12" fill="#6b7280">50</text><line x1="34" x2="388" y1="65.5" y2="65.5" stroke="#e6ebf3"/><text x="28" y="69.5" text-anchor="end" font-size="12" fill="#6b7280">75</text><line x1="34" x2="388" y1="14.0" y2="14.0" stroke="#e6ebf3"/><text x="28" y="18.0" text-anchor="end" font-size="12" fill="#6b7280">100</text><text x="34.0" y="240" text-anchor="middle" font-size="12" fill="#6b7280">0</text><text x="122.5" y="240" text-anchor="middle" font-size="12" fill="#6b7280">25</text><text x="211.0" y="240" text-anchor="middle" font-size="12" fill="#6b7280">50</text><text x="299.5" y="240" text-anchor="middle" font-size="12" fill="#6b7280">75</text><text x="388.0" y="240" text-anchor="middle" font-size="12" fill="#6b7280">100</text><line x1="34.0" y1="220.0" x2="388.0" y2="14.0" stroke="#eb6834" stroke-width="2" stroke-dasharray="6 4"/><polygon points="34.0,220.0 69.4,184.4 104.8,152.0 140.2,124.2 175.6,97.8 211.0,75.4 388.0,14.0 388.0,220.0" fill="#2a78d6" opacity="0.10"/><polyline points="34.0,220.0 69.4,184.4 104.8,152.0 140.2,124.2 175.6,97.8 211.0,75.4 388.0,14.0" fill="none" stroke="#2a78d6" stroke-width="3.2" stroke-linejoin="round"/><circle cx="69.4" cy="184.4" r="4.5" fill="#fff" stroke="#2a78d6" stroke-width="2.5"/><circle cx="104.8" cy="152.0" r="4.5" fill="#fff" stroke="#2a78d6" stroke-width="2.5"/><circle cx="140.2" cy="124.2" r="4.5" fill="#fff" stroke="#2a78d6" stroke-width="2.5"/><circle cx="175.6" cy="97.8" r="4.5" fill="#fff" stroke="#2a78d6" stroke-width="2.5"/><circle cx="211.0" cy="75.4" r="4.5" fill="#fff" stroke="#2a78d6" stroke-width="2.5"/><text x="148.2" y="142.2" font-size="14" font-weight="800" fill="#0d366b">30 % → 46.5 %</text><text x="253.5" y="121.1" font-size="12" fill="#eb6834" font-weight="600">azar</text></svg></div></div>
+<div class="call"><b>ROC-AUC 0.665</b> (IC 95 %: 0.654–0.676) vs 0.612 de la regresión logística · <b>PR-AUC 0.251</b> vs 0.162 del azar. Edad, estado y mes concentran la señal; el género casi no pesa.</div></div>
+</div>
+
+<div class="col">
+<div class="card"><h2><span class="ic">%</span>Propensión por país y edad (% de pedidos que son bicicleta)</h2>
+<div class="heat"><span></span><em><25</em><em>25–34</em><em>35–44</em><em>45–54</em><em>55+</em><em class='pl'>Australia</em><span class="hc" style="background:rgb(46,118,207);color:#fff">19%</span><span class="hc" style="background:rgb(64,140,230);color:#fff">16%</span><span class="hc" style="background:rgb(13,54,107);color:#fff">25%</span><span class="hc" style="background:rgb(41,112,198);color:#fff">20%</span><span class="hc" style="background:rgb(64,140,230);color:#fff">16%</span><em class='pl'>Alemania</em><span class="hc" style="background:rgb(77,147,232);color:#fff">15%</span><span class="hc" style="background:rgb(13,54,107);color:#fff">25%</span><span class="hc" style="background:rgb(19,66,127);color:#fff">24%</span><span class="hc" style="background:rgb(46,118,207);color:#fff">19%</span><span class="hc" style="background:rgb(125,177,239);color:#0b0b0b">11%</span><em class='pl'>Reino Unido</em><span class="hc" style="background:rgb(55,132,225);color:#fff">17%</span><span class="hc" style="background:rgb(13,54,107);color:#fff">25%</span><span class="hc" style="background:rgb(36,104,187);color:#fff">21%</span><span class="hc" style="background:rgb(77,147,232);color:#fff">15%</span><span class="hc" style="background:rgb(102,162,235);color:#0b0b0b">13%</span><em class='pl'>Francia</em><span class="hc" style="background:rgb(125,177,239);color:#0b0b0b">11%</span><span class="hc" style="background:rgb(24,79,147);color:#fff">23%</span><span class="hc" style="background:rgb(46,118,207);color:#fff">19%</span><span class="hc" style="background:rgb(50,125,216);color:#fff">18%</span><span class="hc" style="background:rgb(194,219,249);color:#0b0b0b">5%</span><em class='pl'>EE. UU.</em><span class="hc" style="background:rgb(160,198,244);color:#0b0b0b">8%</span><span class="hc" style="background:rgb(55,132,225);color:#fff">17%</span><span class="hc" style="background:rgb(55,132,225);color:#fff">17%</span><span class="hc" style="background:rgb(89,155,233);color:#fff">14%</span><span class="hc" style="background:rgb(114,170,237);color:#0b0b0b">12%</span><em class='pl'>Canadá</em><span class="hc" style="background:rgb(205,226,251);color:#0b0b0b">4%</span><span class="hc" style="background:rgb(183,212,248);color:#0b0b0b">6%</span><span class="hc" style="background:rgb(137,184,241);color:#0b0b0b">10%</span><span class="hc" style="background:rgb(137,184,241);color:#0b0b0b">10%</span><span class="hc" style="background:rgb(171,205,246);color:#0b0b0b">7%</span></div>
+<ul style="margin-top:8px"><li><b>25–44 años</b> es el núcleo: 18–19 % de bicicletas y $230–257 por pedido.</li>
+<li><b>Canadá (7 %)</b> y EE. UU. (15 %) quedan bajo el promedio de 16.6 %.</li>
+<li>Género: diferencia global de 0.4 pp, no significativa.</li></ul></div>
+
+<div class="card n"><h2><span class="ic">✓</span>Recomendaciones</h2>
+<ol>
+<li><b>Priorizar con el puntaje</b> al 20–30 % de perfiles: mismos compradores con 36 % menos contactos.</li>
+<li><b>Bicicletas a 25–44 años</b> en Alemania, Reino Unido, Francia (25–34) y Australia (35–44).</li>
+<li><b>Accesorios y ropa</b> para menores de 25, mayores de 55, Canadá y EE. UU.</li>
+<li><b>Campañas</b> en nov–dic y may–jun (indicio: un solo ciclo anual).</li>
+<li><b>No segmentar el presupuesto por género.</b></li>
+<li><b>Piloto A/B</b> antes de escalar; capturar ID de cliente e historial.</li></ol></div>
+</div>
+</main>
+
+<footer>
+<h3>Arquitectura de la solución</h3>
+<div class="nd">sales_data.csv<small>data/01_raw</small></div><span class="fa">›</span>
+<div class="nd">data_processing<small>limpieza · catálogo estable · tabla de modelado</small></div><span class="fa">›</span>
+<div class="nd">model_training<small>partición · baselines · Optuna · LightGBM</small></div><span class="fa">›</span>
+<div class="nd">model_evaluation<small>métricas · lift · permutación · segmentos</small></div><span class="fa">›</span>
+<div class="nd">data/08_reporting<small>metrics.json · tablas · gráficos</small></div>
+<div class="ci"><b>Kedro</b> (<code>kedro run</code>) · catálogo y parámetros YAML<br><b>GitHub Actions</b>: Ruff · pytest · kedro run</div>
+</footer>
+</div></div>
+<script>
+function fit() { var s = Math.min(window.innerWidth / 1920, 1.6); var f = document.getElementById('fit');
+  f.style.transform = 'scale(' + s + ')'; document.body.style.height = (1080 * s) + 'px'; document.body.style.overflow = 'hidden auto'; }
+if (!window.matchMedia('print').matches) { fit(); window.addEventListener('resize', fit); }
+</script>
+</body></html>
