@@ -1,0 +1,57 @@
+# Parametros configurables del proyecto (ver README para la descripcion de cada bloque).
+
+data_processing:
+  # Solo se conservan meses con catalogo completo y estable: antes de jul-2013 solo se vendian
+  # bicicletas, jul-2013 es el lanzamiento de las demas categorias y en jul-2014/2016 no hay
+  # bicicletas. Esos meses son otro regimen de catalogo, no comportamiento del cliente.
+  stable_catalog_only: true
+  target_category: Bikes
+  # Llave de los registros "gemelos" (misma fecha dia/mes, edad, genero y estado). Se usa para
+  # que los gemelos nunca queden en entrenamiento y prueba a la vez.
+  group_columns: [Day, Month, Customer_Age, Customer_Gender, State]
+
+features:
+  # Solo variables conocidas antes de la compra. Producto, precio, costo, cantidad, ingreso y
+  # ganancia se excluyen para evitar fuga de informacion.
+  categorical: [genero, pais, estado]
+  numeric: [edad, mes]
+  # Variables numericas que la regresion logistica (linea base) trata como categoricas.
+  baseline_onehot_extra: [mes]
+  target: es_bicicleta
+  group: grupo
+
+split:
+  test_size: 0.2
+  random_state: 42
+
+cross_validation:
+  n_splits: 5
+
+tuning:
+  n_trials: 60
+  random_state: 42
+  cv_seed: 11
+  # Hiperparametros que no se ajustan.
+  fixed_params:
+    subsample_freq: 1
+  # Espacio de busqueda de LightGBM (optimizacion bayesiana TPE con Optuna).
+  search_space:
+    n_estimators: {type: int, low: 100, high: 800}
+    learning_rate: {type: loguniform, low: 0.01, high: 0.1}
+    num_leaves: {type: int, low: 4, high: 48}
+    min_child_samples: {type: int, low: 20, high: 400}
+    subsample: {type: float, low: 0.5, high: 1.0}
+    colsample_bytree: {type: float, low: 0.5, high: 1.0}
+    reg_lambda: {type: loguniform, low: 0.001, high: 30.0}
+    cat_smooth: {type: loguniform, low: 1.0, high: 100.0}
+    min_data_per_group: {type: int, low: 20, high: 300}
+    max_cat_to_onehot: {type: int, low: 2, high: 8}
+
+evaluation:
+  n_bins: 10
+  # Fracciones de la base a contactar en la campana (curva de ganancias).
+  contact_fractions: [0.1, 0.2, 0.3, 0.4, 0.5]
+  permutation_repeats: 10
+  n_bootstrap: 500
+  min_segment_orders: 300
+  random_state: 42

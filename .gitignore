@@ -1,0 +1,21 @@
+# Salidas generadas por `kedro run` (se regeneran; solo se versiona el dato crudo)
+data/**
+!data/01_raw/
+!data/01_raw/sales_data.csv
+
+# Configuracion local y logs de Kedro
+conf/local/**
+!conf/local/.gitkeep
+*.log
+.telemetry
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+.ipynb_checkpoints/
+catboost_info/
